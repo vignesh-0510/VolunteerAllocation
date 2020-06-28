@@ -1,5 +1,31 @@
 id,help_needed,verbs,priorities
-S1,Psychological,medicine-driving-singing-dancing-comedy,9-2-4-4-5
-S2,Food,driving-farming-distributing,5-9-8
-S3,Transportaion,driving,6
-S4,Teaching,teaching-art-dancing-science,9-8-7-6
+S1,Psycologist,Psycotherapy-medicine-teaching-singing,10-1-1-2
+S2,Dancer,Dancing-Driving-Comedy-Acting-singing-painting,10-5-7-8-5-1
+S3,Chef,Cooking-charity-comedy-Museum,10-1-1-1
+S4,Docent,Museum-acting-singing-painting-Farming-provide food,10-1-7-8-1-1
+S5,Traveler,Travelling-medicine-writing-problem solving,10-2-3-1
+S6,Soldier,Protect-Charity-driving-first aid,10-1-3-7
+S7,Player,Playing-Charity-first aid-Medicine-teaching,10-1-7-10-1
+S8,Doctor,Medicine-teaching-Farming-provide food,10-1-1-5
+S9,Docent,Museum-zoo-writing-social work,10-1-1-1
+S10,Judge,Justice-Protect-Reporter-teaching-social work,10-1-7-10-1
+S11,Journalist,Reporter,10
+S12,Programmer,Programming-psycotherapy-Order-social work,10-2-3-1
+S13,Painter,Painting-first aid -social work-painting,10-1-5-6
+S14,Soldier,Protect-cooking-carpentry-Charity-driving,10-1-7-5-1
+S15,costumer,Order-social work-Acting-singing-painting,1-6-9-8-9
+S16,Voluntourism,Charity,15
+S17,Farmer,Farming-provide food-Writing-story teller-first aid,10-1-7-10-1
+S18,Artist,Acting-singing-painting-Dancing,10-1-1-10
+S19,Writer,Writing-story teller-first aid-science-dance,10-5-5-5-5
+S20,Teacher,Teaching,10
+S21,Driver,Driving,10
+S22,Comedian,Comedy-Teaching-artist-critical thinker,10-6-6-6
+S23,Police,Investigation-FIR-critical thinker-provide food-writing,10-9-8-1-1
+S24,Aid work,provide food-driving-singing-distributing,5-5-5-5
+S25,Engineer,Engineering-cooking-carpentry-Driving-painting,3-2-1-5-5
+S26,Psycologist,psycotherapy,5
+S27,Traveler,Travelling-programming-psycotherapy-Charity-driving,7-6-5-4-3
+S28,Soldier,Protect-Charity-driving-story teller-first aid-painting,1-1-1-1-1-1
+S29,Docent,Museum-acting-singing-painting,5-4-3-2
+S30,Chef,singing-cooking-writing-story teller-first aid,1-10-1-2-3

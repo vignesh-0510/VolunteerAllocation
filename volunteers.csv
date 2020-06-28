@@ -1,6 +1,66 @@
-id,Volunteer,verbs,can_serve
-V1,Singer,singing,2
-V2,Artist,acting-singing,2
-V3,Driver,driving-distributing,2
-V4,Doctor,medicine,2
-V5,Farmer,farming,2
+id,volunteer,verbs,can_serve
+V1,Singer,Singing-carpentry,2
+V2,Dancer,Dancing-Driving,2
+V3,Chef,Cooking-charity-comedy,2
+V4,Psycologist,psycotherapy-cooking-singing-public speaking,2
+V5,Traveler,Travelling-medicine-writing,2
+V6,Philosopher,Thinking-problem solving-public speaking,2
+V7,Player,Playing-Charity-first aid,2
+V8,Doctor,Medicine-teaching,2
+V9,Docent,Museum-zoo-writing-social work,2
+V10,Judge,Justice-Protect,2
+V11,Journalist,Reporter-teaching-social work,2
+V12,Programmer,Programming-psycotherapy,2
+V13,Painter,Painting-first aid -social work,2
+V14,Soldier,Protect-cooking-carpentry,2
+V15,costumer,Order-social work,2
+V16,Voluntourism,Charity - driving,2
+V17,Farmer,Farming-provide food,2
+V18,Artist,Acting-singing-painting,2
+V19,Writer,Writing-story teller-first aid,2
+V20,Teacher,Teaching-driving-science-dance,2
+V21,Driver,Driving-singing-Distributing,2
+V22,Comedian,Comedy-Teaching-artist,2
+V23,Police,Investigation-FIR-critical thinker,2
+V24,Aid work,provide food-writing,2
+V25,Engineer,Engineering-cooking-carpentry,2
+V26,Psycologist,psycotherapy-medicine-teaching,2
+V27,Traveler,Travelling-programming-psycotherapy,2
+V28,Soldier,Protect-Charity-driving,2
+V29,Docent,Museum-acting-singing-painting,2
+V30,Chef,Cooking-Writing-story teller-first aid,2
+V31,Journalist,Reporter-Investigation-FIR-critical thinker,2
+V32,Aid work,provide food-driving-singing-distributing,2
+V33,Writer,Writing-comedy-teaching-artist,2
+V34,Painter,Painting-charity-driving,2
+V35,Voluntourism,Charity-Driving-singing-Distributing,2
+V36,Programmer,Programming-Engineering-cooking-carpentry,2
+V37,Singer,singing-cooking-writing-story teller-first aid,2
+V38,Dancer,Dancing-acting-singing-painting,2
+V39,Chef,cooking-provide food-writing,2
+V40,Psycologist,psycotherapy-order-social work,2
+V41,Traveler,Travelling-singing-carpentry,2
+V42,Philosopher,Thinking-farming-provide food,2
+V43,Player,Playing-programming-psycotherapy,2
+V44,Docent,Museum-Travelling-medicine-writing,2
+V45,Doctor,medicine-singing-carpentry,2
+V46,Judge,Justice-cooking-provide food-writing,2
+V47,Journalist,Reporter-thinking-singing-carpentry,2
+V48,Painter,Painting-charity-driving,2
+V49,Police,Investigation-singing-cooking-writing-story teller-first aid,2
+V50,Dancer,DancingTravelling-singing-carpentry,2
+V51,Singer,Singing-writing-comedy-teaching-artist,2
+V52,Aid work,provide food-charity-comedy,2
+V53,Voluntourism,charity-farming-provide food,2
+V54,Philosopher,Thinking-driving-singing-distributing,2
+V55,Player,Playing-singing-carpentry,2
+V56,Docent,Museum-pycotherapy-cooking-singing-public speaking,2
+V57,Programmer,Programming-painting-first aid-social work,2
+V58,Soldier,protect-thinking-problem solving-public speaking,2
+V59,Journalist,Reporter-writing-story teller-first-aid,2
+V60,Police,Investigation-teaching-driving-science-dance,2
+V61,Engineer,Engineering-Justice-protect,2
+V62,Doctor,medicine-cooking-writing-story teller,2
+V63,Judge,Justice-museum-travelling-medicine-writing,2
+V64,Engineer,Engineering-order-social work,2
+V65,Comedian,Comedy-Acting-singing-painting,2
