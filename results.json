@@ -1,767 +1,101 @@
 {
   "S1": {
-    "help": "Psycologist",
+    "help": "Psychological",
     "verbs": [
-      "psycotherapi",
       "medicin",
-      "teach",
-      "sing"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V4",
-        "volunteer": "Psycologist",
-        "verbs": [
-          [
-            "medicine"
-          ]
-        ],
-        "can_serve": 2
-      },
-      {
-        "id": "V45",
-        "volunteer": "Doctor",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V51",
-        "volunteer": "Singer",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S2": {
-    "help": "Dancer",
-    "verbs": [
+      "drive",
+      "sing",
       "danc",
-      "drive",
-      "comedi",
-      "act",
-      "sing",
-      "paint"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V2",
-        "volunteer": "Dancer",
-        "verbs": [
-          [
-            "acting",
-            "singing"
-          ]
-        ],
-        "can_serve": 2
-      },
-      {
-        "id": "V32",
-        "volunteer": "Aid work",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V48",
-        "volunteer": "Painter",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V18",
-        "volunteer": "Artist",
-        "verbs": [],
-        "can_serve": 1
-      },
-      {
-        "id": "V22",
-        "volunteer": "Comedian",
-        "verbs": [],
-        "can_serve": 1
-      }
-    ]
-  },
-  "S3": {
-    "help": "Chef",
-    "verbs": [
-      "cook",
-      "chariti",
-      "comedi",
-      "museum"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V36",
-        "volunteer": "Programmer",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V52",
-        "volunteer": "Aid work",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V56",
-        "volunteer": "Docent",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S4": {
-    "help": "Docent",
-    "verbs": [
-      "museum",
-      "act",
-      "sing",
-      "paint",
-      "farm",
-      "provide food"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V18",
-        "volunteer": "Artist",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V24",
-        "volunteer": "Aid work",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V44",
-        "volunteer": "Docent",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V17",
-        "volunteer": "Farmer",
-        "verbs": [],
-        "can_serve": 1
-      }
-    ]
-  },
-  "S5": {
-    "help": "Traveler",
-    "verbs": [
-      "travel",
-      "medicin",
-      "write",
-      "problem solv"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V5",
-        "volunteer": "Traveler",
-        "verbs": [
-          [
-            "farming"
-          ]
-        ],
-        "can_serve": 2
-      },
-      {
-        "id": "V6",
-        "volunteer": "Philosopher",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S6": {
-    "help": "Soldier",
-    "verbs": [
-      "protect",
-      "chariti",
-      "drive",
-      "first aid"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V28",
-        "volunteer": "Soldier",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V49",
-        "volunteer": "Police",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S7": {
-    "help": "Player",
-    "verbs": [
-      "play",
-      "chariti",
-      "first aid",
-      "medicin",
-      "teach"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V7",
-        "volunteer": "Player",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V8",
-        "volunteer": "Doctor",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S8": {
-    "help": "Doctor",
-    "verbs": [
-      "medicin",
-      "teach",
-      "farm",
-      "provide food"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V26",
-        "volunteer": "Psycologist",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V42",
-        "volunteer": "Philosopher",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S9": {
-    "help": "Docent",
-    "verbs": [
-      "museum",
-      "zoo",
-      "write",
-      "social work"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V9",
-        "volunteer": "Docent",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S10": {
-    "help": "Judge",
-    "verbs": [
-      "justic",
-      "protect",
-      "report",
-      "teach",
-      "social work"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V10",
-        "volunteer": "Judge",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V11",
-        "volunteer": "Journalist",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S11": {
-    "help": "Journalist",
-    "verbs": [
-      "report"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V31",
-        "volunteer": "Journalist",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S12": {
-    "help": "Programmer",
-    "verbs": [
-      "program",
-      "psycotherapi",
-      "order",
-      "social work"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V12",
-        "volunteer": "Programmer",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V57",
-        "volunteer": "Programmer",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V64",
-        "volunteer": "Engineer",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S13": {
-    "help": "Painter",
-    "verbs": [
-      "paint",
-      "first aid ",
-      "social work",
-      "paint"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V13",
-        "volunteer": "Painter",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S14": {
-    "help": "Soldier",
-    "verbs": [
-      "protect",
-      "cook",
-      "carpentri",
-      "chariti",
-      "drive"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V14",
-        "volunteer": "Soldier",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V53",
-        "volunteer": "Voluntourism",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V54",
-        "volunteer": "Philosopher",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S15": {
-    "help": "costumer",
-    "verbs": [
-      "order",
-      "social work",
-      "act",
-      "sing",
-      "paint"
+      "comedi"
     ],
     "volunteers_allocated": [
       {
         "id": "V1",
-        "volunteer": "Singer",
+        "Volunteer": "Singer",
         "verbs": [
           [
-            "singing"
+            "Singing",
+            "carpentry"
           ]
         ],
         "can_serve": 2
       },
       {
-        "id": "V15",
-        "volunteer": "costumer",
-        "verbs": [],
+        "id": "V4",
+        "Volunteer": "Doctor",
+        "verbs": [
+          [
+            "psycotherapy",
+            "cooking",
+            "singing",
+            "public speaking"
+          ]
+        ],
         "can_serve": 2
       },
-      {
-        "id": "V65",
-        "volunteer": "Comedian",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S16": {
-    "help": "Voluntourism",
-    "verbs": [
-      "chariti"
-    ],
-    "volunteers_allocated": [
       {
         "id": "V3",
-        "volunteer": "Chef",
+        "Volunteer": "Driver",
         "verbs": [
           [
-            "driving",
-            "distributing"
+            "Cooking",
+            "charity",
+            "comedy"
           ]
         ],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S17": {
-    "help": "Farmer",
-    "verbs": [
-      "farm",
-      "provide food",
-      "write",
-      "story tel",
-      "first aid"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V17",
-        "volunteer": "Farmer",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V30",
-        "volunteer": "Chef",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S18": {
-    "help": "Artist",
-    "verbs": [
-      "act",
-      "sing",
-      "paint",
-      "danc"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V38",
-        "volunteer": "Dancer",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S19": {
-    "help": "Writer",
-    "verbs": [
-      "write",
-      "story tel",
-      "first aid",
-      "scienc",
-      "danc"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V19",
-        "volunteer": "Writer",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V60",
-        "volunteer": "Police",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S20": {
-    "help": "Teacher",
-    "verbs": [
-      "teach"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V33",
-        "volunteer": "Writer",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S21": {
-    "help": "Driver",
-    "verbs": [
-      "drive"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V20",
-        "volunteer": "Teacher",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S22": {
-    "help": "Comedian",
-    "verbs": [
-      "comedi",
-      "teach",
-      "artist",
-      "critical think"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V22",
-        "volunteer": "Comedian",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V23",
-        "volunteer": "Police",
-        "verbs": [],
         "can_serve": 1
       }
     ]
   },
-  "S23": {
-    "help": "Police",
+  "S2": {
+    "help": "Food",
     "verbs": [
-      "investig",
-      "fir",
-      "critical think",
-      "provide food",
-      "write"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V23",
-        "volunteer": "Police",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V46",
-        "volunteer": "Judge",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S24": {
-    "help": "Aid work",
-    "verbs": [
-      "provide food",
       "drive",
-      "sing",
+      "farm",
       "distribut"
     ],
     "volunteers_allocated": [
       {
-        "id": "V21",
-        "volunteer": "Driver",
-        "verbs": [],
+        "id": "V3",
+        "Volunteer": "Driver",
+        "verbs": [
+          [
+            "Cooking",
+            "charity",
+            "comedy"
+          ]
+        ],
         "can_serve": 2
       },
       {
-        "id": "V39",
-        "volunteer": "Chef",
-        "verbs": [],
+        "id": "V5",
+        "Volunteer": "Farmer",
+        "verbs": [
+          [
+            "Travelling",
+            "medicine",
+            "writing"
+          ]
+        ],
         "can_serve": 2
       }
     ]
   },
-  "S25": {
-    "help": "Engineer",
+  "S3": {
+    "help": "Transportaion",
     "verbs": [
-      "engin",
-      "cook",
-      "carpentri",
-      "drive",
-      "paint"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V34",
-        "volunteer": "Painter",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V41",
-        "volunteer": "Traveler",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V61",
-        "volunteer": "Engineer",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V62",
-        "volunteer": "Doctor",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S26": {
-    "help": "Psycologist",
-    "verbs": [
-      "psycotherapi"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V40",
-        "volunteer": "Psycologist",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S27": {
-    "help": "Traveler",
-    "verbs": [
-      "travel",
-      "program",
-      "psycotherapi",
-      "chariti",
       "drive"
     ],
-    "volunteers_allocated": [
-      {
-        "id": "V27",
-        "volunteer": "Traveler",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V35",
-        "volunteer": "Voluntourism",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
+    "volunteers_allocated": []
   },
-  "S28": {
-    "help": "Soldier",
+  "S4": {
+    "help": "Teaching",
     "verbs": [
-      "protect",
-      "chariti",
-      "drive",
-      "story tel",
-      "first aid",
-      "paint"
+      "teach",
+      "art",
+      "danc",
+      "scienc"
     ],
-    "volunteers_allocated": [
-      {
-        "id": "V58",
-        "volunteer": "Soldier",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V59",
-        "volunteer": "Journalist",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V2",
-        "volunteer": "Dancer",
-        "verbs": [
-          [
-            "acting",
-            "singing"
-          ]
-        ],
-        "can_serve": 1
-      },
-      {
-        "id": "V3",
-        "volunteer": "Chef",
-        "verbs": [
-          [
-            "driving",
-            "distributing"
-          ]
-        ],
-        "can_serve": 1
-      },
-      {
-        "id": "V7",
-        "volunteer": "Player",
-        "verbs": [],
-        "can_serve": 1
-      },
-      {
-        "id": "V13",
-        "volunteer": "Painter",
-        "verbs": [],
-        "can_serve": 1
-      }
-    ]
-  },
-  "S29": {
-    "help": "Docent",
-    "verbs": [
-      "museum",
-      "act",
-      "sing",
-      "paint"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V29",
-        "volunteer": "Docent",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
-  },
-  "S30": {
-    "help": "Chef",
-    "verbs": [
-      "sing",
-      "cook",
-      "write",
-      "story tel",
-      "first aid"
-    ],
-    "volunteers_allocated": [
-      {
-        "id": "V25",
-        "volunteer": "Engineer",
-        "verbs": [],
-        "can_serve": 2
-      },
-      {
-        "id": "V37",
-        "volunteer": "Singer",
-        "verbs": [],
-        "can_serve": 2
-      }
-    ]
+    "volunteers_allocated": []
   }
 }
