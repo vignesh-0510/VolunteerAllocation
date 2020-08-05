@@ -1,53 +1,61 @@
 import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
 from nltk.stem import SnowballStemmer
 import random
-plt.style.use("seaborn")
 import json
+import sys
+sys.path.append('C:/Users/sathyamoorthy pandia/AppData/Local/Programs/Python/Python37/Lib/site-packages')
+from pymongo import MongoClient
+import requests
 
 # DATA PREPARATION
+print('Collecting Data')
+# Connecting to Database
+try:
+    client = MongoClient('mongodb+srv://annu:ammu@cluster0.9896d.mongodb.net/ask-foundation?retryWrites=true&w=majority')
+    db_name = 'ask-foundation'
+    db = client.get_database(db_name)
+except Exception as e:
+    print("Couldn't connect to database",e,sep='\n')
 # Get Victims Data
 snow = SnowballStemmer(language='english')
-victim_file = "victims_sample_v2.csv"
-victims_df = pd.read_csv(victim_file)
+victim_file = "recipients"
+victims_df = pd.DataFrame(list(db[victim_file].find()))
 victims_df["skills"] = [[snow.stem(y) for y in x.split('-')] for x in victims_df["skills"]]
 victims_df["priorities"] = [[ int(y) for y in x.split('-') ] for x in victims_df["priorities"]]
-# print(victims_df.head())
-# print("\n\n")
+
 
 # Get Volunteers Data
-volunteer_file = "volunteers_sample_v2.csv"
-volunteers_df = pd.read_csv(volunteer_file)
+volunteer_file = "volunteers"
+volunteers_df = pd.DataFrame(list(db[volunteer_file].find()))
 volunteers_df["skills"] = [[snow.stem(y) for y in x.split('-')] for x in volunteers_df["skills"]]
-volunteers_df_copy = pd.read_csv(volunteer_file)
+volunteers_df_copy = pd.DataFrame(list(db[volunteer_file].find()))
 volunteers_df_copy["skills"] = [x.split('-') for x in volunteers_df_copy["skills"]]
 volunteers_df_copy.drop(columns=["can_serve"])
-# print(volunteers_df.head())
+print("Data is collected")
 
 # DECLARE AND INITIALISE RESULT OF TYPE JSON OBJECT
 results = dict()
 for i in range(victims_df.shape[0]):
     row = victims_df.iloc[i].values
     result = {}
-    idx = row[0]
-    result['help'] = row[1]
-    result['skills'] = row[2]
+    idx = str(row[0])
+    result['id'] = idx
+    result['name'] = row[1]
+    result['email'] = row[2]
+    result['skills'] = row[3]
     result['volunteers_allocated'] = []
     results[idx] = result
-    
-#results
 
+#DECLARE AND INITIALISE CLUSTERS
 k= victims_df.shape[0]
-colors = ['green','red','blue','yellow','orange']
 clusters = {}
 for i in range(k):
     victim = victims_df.iloc[i].to_dict() # they will be Centroid of the clusters
     points = []
     cluster = {
         'victim': victim,
-        'points': points,
-        'color': colors[i%len(colors)]
+        'points': points
     }
     clusters[i] = cluster
     
@@ -86,15 +94,15 @@ def AssignPointsToClusters(Volunteers, clusters):
         max_list = [idx for idx,val in enumerate(dist) if val == maximum]
         # Randomly choose one victim to be assigned if multiple victims have same distance score
         cur_cluster = random.choice(max_list)
-        print("dist:", dist, "max:", maximum, "argmax(selected):", cur_cluster)
         if maximum != 0:
             clusters[cur_cluster]['points'].append(cur_vol)
             # Remove common Elements from Victims so that further Volunteers are not assigned
             common_elements = common_elements_list[cur_cluster]
-            priorities_list = clusters[cur_cluster]['victim']['priorities']
-            priorities_list = [x for (i,x) in enumerate(priorities_list) if clusters[cur_cluster]['victim']['skills'][i] not in common_elements]
+            priority_list = clusters[cur_cluster]['victim']['priorities']
+            priorities_list = [x for (i,x) in enumerate(priority_list) if clusters[cur_cluster]['victim']['skills'][i] not in common_elements]
             clusters[cur_cluster]['victim']['priorities'] = priorities_list
-            clusters[cur_cluster]['victim']['skills'] = remove_common_elements(clusters[cur_cluster]['victim']['skills'],common_elements)    
+            clusters[cur_cluster]['victim']['skills'] = remove_common_elements(clusters[cur_cluster]['victim']['skills'],common_elements)
+            results[str(clusters[cur_cluster]['victim']['_id'])]['skills'] = clusters[cur_cluster]['victim']['skills']
             if cur_vol['can_serve'] == 1:
                 cur_vol['skills'] = remove_common_elements(cur_vol['skills'],common_elements)
                 volunteers_df['skills'].iloc[ix] = cur_vol['skills']
@@ -110,12 +118,14 @@ def UpdateClusters(clusters,k):
         pts = np.array(clusters[kx]['points'])
         if pts.shape[0]>0:
             for ix in range(pts.shape[0]):
-                idx = clusters[kx]['victim']['id']
-                verbs_list = volunteers_df_copy['skills'].loc[volunteers_df_copy["id"] == pts[ix]['id']].to_list()
+                idx = str(clusters[kx]['victim']['_id'])
+                verbs_list = volunteers_df_copy['skills'].loc[volunteers_df_copy["_id"] == pts[ix]['_id']].to_list()
                 pts[ix]['skills'] = verbs_list
-                
+                pts[ix]['_id'] = str(pts[ix]['_id'])
+                pts[ix]['can_serve'] = int(pts[ix]['can_serve'])
+                pts[ix]['__v'] = int(pts[ix]['__v'])
                 results[idx]['volunteers_allocated'].append(pts[ix])
-                print("Volunteer:", pts[ix]["id"], "is assigned to Victim:", idx)
+                print("Volunteer:", pts[ix]["name"], "is assigned to Victim:", clusters[kx]['victim']['name'])
             clusters[kx]['points'] = [] #Clear the List
 
 def model(X,clusters,k):
@@ -123,22 +133,28 @@ def model(X,clusters,k):
     while not done:
         done = AssignPointsToClusters(X,clusters)
         UpdateClusters(clusters,k)
-        
+
+print("Running the model")
 model(volunteers_df,clusters, k)
-# results
+print("Model was successful")
 
-class NpEncoder(json.JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, np.integer):
-            return int(obj)
-        elif isinstance(obj, np.floating):
-            return float(obj)
-        elif isinstance(obj, np.ndarray):
-            return obj.tolist()
-        else:
-            return super(NpEncoder, self).default(obj)
+# WRITE THE RESULTS TO COLLECTION IN DATABASE
+try:
+    print("Updating results in database")
+    df = pd.DataFrame.from_dict(results,orient='index')
+    db.results.insert_many(df.to_dict('records'))
+    print("Successfully Updated the database")
+except Exception as e:
+    print("Couldn't write the results to the database", e, sep="\n")
 
-# WRITE THE OUTPUT TO FILE
-json_obj = json.dumps(results, indent=2, cls=NpEncoder)
-with open('results_v2.json', 'w') as f:
-    f.write(json_obj)
+# CALLING THE URL TO SEND EMAILS
+try:
+    print('Sending emails to victims and clients')
+    URL = 'http://ask-foundation.herokuapp.com/notify-allocations'
+    r = requests.get(url = URL)
+    if(r.status_code == 200):
+        print(r.content.decode('utf-8'))
+    else:
+        print('Unable to send messages')
+except Exception as e:
+    print("Couldn't send e-mails", e, sep="\n")
