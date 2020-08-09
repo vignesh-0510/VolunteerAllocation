@@ -90,10 +90,8 @@ def AssignPointsToClusters(Volunteers, clusters):
             distance = get_distance(common_elements, clusters[kx]['victim']['skills'], clusters[kx]['victim']['priorities'])
             dist.append(distance)
         
-        maximum = np.max(dist)
-        max_list = [idx for idx,val in enumerate(dist) if val == maximum]
-        # Randomly choose one victim to be assigned if multiple victims have same distance score
-        cur_cluster = random.choice(max_list)
+        cur_cluster = np.argmax(dist)
+        maximum = dist[cur_cluster]
         if maximum != 0:
             clusters[cur_cluster]['points'].append(cur_vol)
             # Remove common Elements from Victims so that further Volunteers are not assigned
@@ -106,6 +104,8 @@ def AssignPointsToClusters(Volunteers, clusters):
             if cur_vol['can_serve'] == 1:
                 cur_vol['skills'] = remove_common_elements(cur_vol['skills'],common_elements)
                 volunteers_df['skills'].iloc[ix] = cur_vol['skills']
+            elif cur_vol['can_serve'] < 1:
+                continue
             else:
                 volunteers_df['can_serve'].iloc[ix] = cur_vol['can_serve'] - 1
             done = False
