@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: visible !important;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #adb5ba;
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background: #ED5565;
+  }
+  
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: black;
+}
+
+h1 {
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+.home {
+  min-height: 100vh;
+  background-image: url(./assets/help_each_other.jpg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home .title span {
+  color: white;
+  background-color: rgb(1, 1, 1, 0.3);
+  padding: 5px;
+  font-size: 70px;
+  border-radius: 10px;
+}
+
+.home .title span:hover {
+  background-color: rgb(1, 1, 1, 0.5);
+}
+
+.home .sub-title span {
+  color: white;
+  background-color: rgb(1, 1, 1, 0.3);
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.home .sub-title span:hover {
+  background-color: rgb(1, 1, 1, 0.5);
+}
+
+.button {
+  font-size: 30px;
+  border-radius: 10px;
+  border: solid 1px black;
+}
+
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: solid 1px black;
+}
+
+.recipient-title {
+  margin-bottom: 70px !important;
+  font-size: 50px;  
+}
+
+.recipient-page {
+  min-height: 100vh;
+  background-image: url(./assets/northern_lights.webp);
+  background-size: 100vw  100vh !important;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.volunteer-title{
+  margin-bottom: 70px !important;
+  font-size: 50px;
+}
+
+.volunteer-page {
+  min-height: 100vh;
+  background-image: url(./assets/northern_lights.webp);
+  background-size: 100vw  100vh !important;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.form {
+  background-color: rgb(1, 1, 1, 0.5);
+  border-radius: 10px;
+}
+
+.form:hover {
+  position: relative;
+  background-color: rgb(1, 1, 1, 0.7);
+  border-radius: 10px;
+  z-index: 10;
+  box-shadow: 2px 2px 2px 1px rgba(187, 8, 8, 0.3);
+}
+
+.submit-button {
+  width: 120px;
+  padding: 3px;
+  border: solid 1px black;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+.entry
+ {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+ }
+
+ .entry .label {
+   width: 160px;
+   text-align: center;
+   margin-right: 20px;
+ }
+
+ .entry .input {
+    width: 220px;
+    font-size: 14px;
+    text-align: center;
+    color: blue;
+    border: none;
+    border-radius: 20;
+    border-bottom: 1px solid #ED5565;
+ }
+
+form .errorMessage{
+  color: red;
+  border: none;
+  border-radius: 20;
+  border-bottom: 1px solid gray;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 500px) {
+
+  html {
+    height: 100vh !important;
+    width: 100vw !important;
+  }
+
+    .home .title span {
+      padding: 5px;
+      font-size: 50px;
+    }
+    
+    .home .sub-title span {
+      padding: 5px;
+      font-size: 16px;
+    }
+    
+    
+    .button {
+      font-size: 20px;
+      border-radius: 5px;
+      border: solid 1px black;
+    }
+    
+    
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 12px;
+      border-radius: 5px;
+      border: solid 1px black;
+    }
+    
+    .recipient-title {
+      margin-top: 10vh !important;
+      margin-bottom: 10vh !important;
+      font-size: 50px;  
+    }
+    
+    .home {
+      min-height: 100vh;
+      background-image: url(./assets/help_each_other.jpg);
+      background-position: top center;
+      background-size: cover !important;
+      background-repeat: no-repeat;
+    }
+
+    .recipient-page {
+      min-height: 100vh;
+      background-image: url(./assets/northern_lights.webp);
+      background-position: top center;
+      background-size: cover !important;
+      background-repeat: no-repeat;
+      font-size: calc(10px + 2vmin);
+      color: white;
+    }
+    
+    .volunteer-title{
+      margin-top: 10vh !important;
+      margin-bottom: 10vh !important;
+      font-size: 50px;
+    }
+    
+    .volunteer-page {
+      min-height: 100vh;
+      background-image: url(./assets/northern_lights.webp);
+      background-position: top center;
+      background-size: cover !important;
+      background-repeat: no-repeat;
+      font-size: calc(10px + 2vmin);
+      color: white;
+    }
+    
+    .form {
+      background-color: rgb(1, 1, 1, 0.5);
+      border-radius: 10px;
+    }
+    
+    .form:hover {
+      position: relative;
+      bottom: 2px;
+      left: 2px;
+      background-color: rgb(1, 1, 1, 0.7);
+      border-radius: 10px;
+      z-index: 10;
+      box-shadow: 2px 2px 2px 1px rgba(187, 8, 8, 0.3);
+    }
+    
+    .submit-button {
+      width: 60px;
+      padding: 3px;
+      border: solid 1px black;
+      font-size: 15px;
+      border-radius: 5px;
+    }
+
+    .entry {
+    margin-bottom: 10px !important;
+    }
+
+    .entry .label {
+      width: 120px;
+      margin-right: 10px;
+    }
+    
+    .entry .input {
+      width: 210px;
+      border-radius: 12;
+    }    
+    
+    form .errorMessage{
+      font-size: 16px;
+    }
+}
